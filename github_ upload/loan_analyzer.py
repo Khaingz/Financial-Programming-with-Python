@@ -20,22 +20,22 @@ loan_costs = [500, 600, 200, 1000, 450]
 # @TODO: Use the `len` function to calculate the total number of loans in the list.
 # Print the number of loans from the list
 # YOUR CODE HERE!
-total_number = len(loan_costs)
-print(f"The total number of loans in the list is {total_number}")
+number_of_loan = len(loan_costs)
+print(f"The total number of loans in the list is {number_of_loan}")
 
 # What is the total of all loans?
 # @TODO: Use the `sum` function to calculate the total of all loans in the list.
 # Print the total value of the loans
 # YOUR CODE HERE!
 total_loan = sum(loan_costs) 
-print(f"The total of all loans in the list is ${total_loan}")
+print(f"The total of all loans in the list is ${total_loan: .2f}")
 
 # What is the average loan amount from the list?
 # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
 # Print the average loan amount
 # YOUR CODE HERE!
 average_loan_price = total_loan / len(loan_costs)
-print(f"The average loan price is ${average_loan_price}")
+print(f"The average loan price is ${average_loan_price: .2f}")
 
 """Part 2: Analyze Loan Data.
 
@@ -72,7 +72,7 @@ loan = {
 # Print each variable.
 # YOUR CODE HERE!
 future_value = loan.get("future_value")
-print(f"Future value is ${future_value}")
+print(f"Future value is ${future_value: .2f}")
 remaining_months = loan.get("remaining_months")
 print(f"Remaining months is {remaining_months} months")
 
@@ -212,7 +212,6 @@ with open(output_path, "w") as csvfile:
     csvwriter.writerow(header)
     # and each row of `loan.values()` from the `inexpensive_loans` list.
     # YOUR CODE HERE!
-
     for loan in inexpensive_loans:
         csvwriter.writerow(loan.values())
-        print(loan)
+        print(f"The loan values list is {loan.values()}")
